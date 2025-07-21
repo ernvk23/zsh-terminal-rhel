@@ -10,8 +10,8 @@ if ! command -v dnf &> /dev/null; then
 fi
 
 # Ensure not running as root
-if [[ $EUID -eq 0 ]]; then
-   echo "[ERROR] This script must not be run as root. Use a regular user with sudo privileges. Exiting."
+if [[ $EUID -ne 0 ]]; then
+   echo "[ERROR] This script must be run as root. Exiting."
    exit 1
 fi
 
@@ -118,7 +118,7 @@ main() {
     if [[ "$SHELL" == */zsh ]]; then
         echo "[INFO] zsh is already the default shell. Skipping."
     else
-        if chsh -s "$(which zsh)" "$USER"; then
+        if sudo chsh -s "$(which zsh)" "$USER"; then
             echo "[SUCCESS] Default shell changed to zsh for user '$USER'."
             echo "[INFO] Please log out and log back in for the change to take effect."
         else
