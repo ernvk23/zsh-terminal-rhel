@@ -35,7 +35,6 @@ HISTFILE=~/.zsh_history
 alias ls='ls --color=auto'
 alias ll='ls -lah --color=auto'
 alias grep='grep --color=auto'
-alias usys='sudo dnf update -y'
 EOF
 )
 
