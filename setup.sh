@@ -76,8 +76,8 @@ main() {
     echo "[INFO] Starting terminal setup for RHEL-based systems..."
 
     # Install dependencies
-    echo "[INFO] Installing required packages: zsh, git, curl, util-linux-user..."
-    sudo dnf install -y zsh git curl util-linux-user
+    echo "[INFO] Installing required packages: zsh, git, curl, tar, util-linux-user..."
+    sudo dnf install -y zsh git curl tar util-linux-user
     echo "[SUCCESS] Dependencies installed."
 
     # Configure .zshrc
