@@ -9,12 +9,6 @@ if ! command -v dnf &> /dev/null; then
     exit 1
 fi
 
-# Ensure not running as root
-if [[ $EUID -ne 0 ]]; then
-   echo "[ERROR] This script must be run as root. Exiting."
-   exit 1
-fi
-
 # --- Configuration ---
 ZSHRC_PATH="$HOME/.zshrc"
 
