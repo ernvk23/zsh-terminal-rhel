@@ -25,7 +25,7 @@ This script helps you set up a modern terminal environment on a RHEL-based OS (l
 ### Quick start
 1. Run this command on your terminal:
   ```bash
-  curl -O https://raw.githubusercontent.com/ernvk23/zsh-terminal-rhel/main/setup.sh && chmod +x ./setup.sh && sudo ./setup.sh
+  curl -O https://raw.githubusercontent.com/ernvk23/zsh-terminal-rhel/main/setup.sh && chmod +x ./setup.sh && ./setup.sh
   ```
 
 ### Tested Distributions
